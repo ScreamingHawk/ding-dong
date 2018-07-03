@@ -6,6 +6,8 @@ A door bell notification endpoint.
 
 Posts a message on Twitter when called.
 
+Limits posts to once a minute.
+
 ## Usage
 
 Configure a [Twitter app][0].
