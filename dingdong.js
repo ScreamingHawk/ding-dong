@@ -21,7 +21,7 @@ Twitter.get("statuses/user_timeline", {
 	if (data.length > 0){
 		const last = new Date(data[0].created_at);
 		let minute = new Date();
-		minute.setMinutes(minute.getMinutes() - 1);
+		minute.setMinutes(minute.getMinutes() - config.post.rateLimitMinute);
 		if (last >= minute){
 			console.log("Rate limited");
 			return;

@@ -8,6 +8,7 @@
 	"post": {
 		"content": "Ding Dong! @_MichaelStanden",
 		"dateLocale": "en-GB",
-		"timeZone": "Pacific/Auckland"
+		"timeZone": "Pacific/Auckland",
+		"rateLimitMinute": 1
 	}
 }
