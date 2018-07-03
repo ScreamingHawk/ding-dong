@@ -10,30 +10,34 @@ const now = new Date().toLocaleString(config.post.dateLocale, {
 	"timeZone": config.post.timeZone
 });
 
-// Check last
-Twitter.get("statuses/user_timeline", {
-	count: 1,
-}, function(err, data){
-	if (err){
-		console.log(err);
-		return;
-	}
-	if (data.length > 0){
-		const last = new Date(data[0].created_at);
-		let minute = new Date();
-		minute.setMinutes(minute.getMinutes() - config.post.rateLimitMinute);
-		if (last >= minute){
-			console.log("Rate limited");
-			return;
-		}
-	}
-	// Ok. Send tweet
-	Twitter.post("statuses/update", {
-		status: `${config.post.content} ${now}`
+exports.handler = function(_, context){
+	// Check last
+	Twitter.get("statuses/user_timeline", {
+		count: 1,
 	}, function(err, data){
 		if (err){
-			console.log(err);
+			context.fail(err);
+			return;
 		}
-		console.log(data);
+		if (data.length > 0){
+			const last = new Date(data[0].created_at);
+			let minute = new Date();
+			minute.setMinutes(minute.getMinutes() - config.post.rateLimitMinute);
+			if (last >= minute){
+				context.fail(err);
+				return;
+			}
+		}
+		// Ok. Send tweet
+		Twitter.post("statuses/update", {
+			status: `${config.post.content} ${now}`
+		}, function(err, data){
+			if (err){
+				context.fail(err);
+				return;
+			}
+			console.log(data);
+			context.done();
+		});
 	});
-});
+};

@@ -2,9 +2,9 @@
   "name": "ding-dong",
   "version": "1.0.0",
   "description": "A door bell notification endpoint",
-  "main": "dingdong.js",
+  "main": "callit.js",
   "scripts": {
-    "start": "node dingdong.js",
+    "start": "node callit.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
