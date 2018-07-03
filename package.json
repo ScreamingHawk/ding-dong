@@ -1,0 +1,27 @@
+{
+  "name": "ding-dong",
+  "version": "1.0.0",
+  "description": "A door bell notification endpoint",
+  "main": "dingdong.js",
+  "scripts": {
+    "start": "node dingdong.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScreamingHawk/ding-dong.git"
+  },
+  "author": {
+    "name": "Michael Standen",
+    "email": "screaminghawk@gmail.com",
+    "url": "https://michael.standen.link"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ScreamingHawk/ding-dong/issues"
+  },
+  "homepage": "https://github.com/ScreamingHawk/ding-dong#readme",
+  "dependencies": {
+    "twit": "^2.2.11"
+  }
+}

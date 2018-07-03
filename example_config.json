@@ -1,0 +1,13 @@
+{
+	"auth": {
+		"consumer_key": "",
+		"consumer_secret": "",
+		"access_token": "",
+		"access_token_secret": ""
+	},
+	"post": {
+		"content": "Ding Dong! @_MichaelStanden",
+		"dateLocale": "en-GB",
+		"timeZone": "Pacific/Auckland"
+	}
+}
