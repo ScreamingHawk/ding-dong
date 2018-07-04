@@ -6,7 +6,7 @@ const config = require("./config.json");
 
 const Twitter = new twit(config.auth);
 
-const now = new Date().toLocaleString(config.post.dateLocale, {
+let now = new Date().toLocaleString(config.post.dateLocale, {
 	"timeZone": config.post.timeZone
 });
 
@@ -20,7 +20,7 @@ exports.handler = function(_, context){
 			return;
 		}
 		if (data.length > 0){
-			const last = new Date(data[0].created_at);
+			let last = new Date(data[0].created_at);
 			let minute = new Date();
 			minute.setMinutes(minute.getMinutes() - config.post.rateLimitMinute);
 			if (last >= minute){
