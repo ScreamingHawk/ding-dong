@@ -6,7 +6,11 @@
 		"access_token_secret": ""
 	},
 	"post": {
-		"content": "Ding Dong! @_MichaelStanden",
+		"contents": [
+			"Ding Dong! @_MichaelStanden @misskatles",
+			"Knock knock knock! @_MichaelStanden @misskatles",
+			"Hey @_MichaelStanden, @misskatles! Someone's at the door"
+		],
 		"dateLocale": "en-GB",
 		"timeZone": "Pacific/Auckland",
 		"rateLimitMinute": 1

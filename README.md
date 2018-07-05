@@ -16,7 +16,8 @@ Copy `example_config.json` to `config.json`.
 
 Replace the values in `config.json/auth` with the keys from the Twitter app step.
 
-Replace the values in `config.json/post` with what you would like the bot to post.
+Replace the values in `config.json/post.contents` with a list of what you would like the bot to post.
+It picks one at random, without repeat.
 
 Install dependencies with `npm i`.
 
